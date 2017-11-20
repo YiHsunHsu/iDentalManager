@@ -8,6 +8,11 @@ namespace iDentalManager.DataTables
     {
         private string sqlcmd;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="agencyCode"></param>
+        /// <returns></returns>
         public DataTable QueryAgency(string agencyCode)
         {
             sqlcmd = @"SELECT * FROM Agencys WHERE Agency_Code = @Agency_Code";
@@ -19,6 +24,12 @@ namespace iDentalManager.DataTables
             return dt;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Status"></param>
+        /// <param name="agencyCode"></param>
+        /// <returns></returns>
         public DataTable UpdateAgencyStatus(string Status, string agencyCode)
         {
             switch (Status)

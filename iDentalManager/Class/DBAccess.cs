@@ -37,8 +37,7 @@ namespace iDentalManager.Class
                 return false;
             }
         }
-
-
+        
         /// <summary>
         /// Execute sqlstring command by inline sql
         /// </summary>
@@ -56,6 +55,7 @@ namespace iDentalManager.Class
 
             return dataSet;
         }
+
         public static SqlCommand ExecuteQueryCommand(string Sqlcmd, IDataParameter[] parameters)
         {
             SqlCommand command = new SqlCommand(Sqlcmd, sqlConnection);
@@ -84,6 +84,7 @@ namespace iDentalManager.Class
                 sqlConnection.Close();
             }
         }
+
         public static int ExecuteNonQueryCommand(string Sqlcmd, IDataParameter[] parameters)
         {
             SqlCommand command = new SqlCommand(Sqlcmd, sqlConnection);
